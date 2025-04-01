@@ -38,18 +38,3 @@ flow:
   results:
     - SUCCESS
     - FAILURE
-extensions:
-  graph:
-    steps:
-      ssh_command:
-        x: 360
-        'y': 320
-        navigate:
-          b81ada0b-625e-4c03-e375-27566ca635e4:
-            targetId: 314f8234-b2c2-39e1-b816-2b076d39af66
-            port: SUCCESS
-    results:
-      SUCCESS:
-        314f8234-b2c2-39e1-b816-2b076d39af66:
-          x: 800
-          'y': 320
