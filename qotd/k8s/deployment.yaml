@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quote-of-the-day
+spec:
+  replicas: 2  # 2 Container laufen gleichzeitig
+  selector:
+    matchLabels:
+      app: quote-of-the-day
+  template:
+    metadata:
+      labels:
+        app: quote-of-the-day
+    spec:
+      containers:
+      - name: quote-of-the-day
+        image: registry.gitlab.com/username/quote-of-the-day:latest
+        ports:
+        - containerPort: 8080
