@@ -13,11 +13,11 @@ flow:
                 value: '5555'
                 sensitive: true
         navigate:
-          - SUCCESS: second_command
+          - SUCCESS: ssh_command_1
           - FAILURE: on_failure
     - second_command:
         do:
-          OaC.Qotd.Mod.ssh_command: []
+          OaC.Qotd.Mod.ssh_command_1: []
             - host: '1111'
             - port: '2222'
             - command: '3333'
@@ -26,11 +26,11 @@ flow:
                 value: '5555'
                 sensitive: true
         navigate:
-          - SUCCESS: third_command
+          - SUCCESS: ssh_command_2
           - FAILURE: on_failure
     - third_command:
         do:
-          OaC.Qotd.Mod.ssh_command: []
+          OaC.Qotd.Mod.ssh_command_2: []
             - host: '1111'
             - port: '2222'
             - command: '3333'
