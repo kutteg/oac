@@ -12,7 +12,7 @@ flow:
         do:
           OaC.Qotd.Mod.ssh_command: []
         navigate:
-          - SUCCESS: azure_login
+          - SUCCESS: SUCCESS
           - FAILURE: on_failure
 results:
     - SUCCESS
