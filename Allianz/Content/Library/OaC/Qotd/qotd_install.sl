@@ -25,8 +25,20 @@ flow:
         do:
           OaC.Qotd.Mod.ssh_command: []
         navigate:
+          - SUCCESS: ssh_command_3
+          - FAILURE: on_failure
+    - ssh_command_3:
+        do:
+          OaC.Qotd.Mod.ssh_command: []
+        navigate:
+          - SUCCESS: ssh_command_4
+          - FAILURE: on_failure
+    - ssh_command_4:
+        do:
+          OaC.Qotd.Mod.ssh_command: []
+        navigate:
           - SUCCESS: SUCCESS
           - FAILURE: on_failure
-  results:
+results:
     - SUCCESS
     - FAILURE
