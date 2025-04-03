@@ -12,8 +12,20 @@ flow:
         do:
           OaC.Qotd.Mod.ssh_command: []
         navigate:
+          - SUCCESS: azure_login
+          - FAILURE: on_failure
+      - azure_login:
+        do:
+          OaC.Qotd.Mod.ssh_command: []
+        navigate:
+          - SUCCESS: aks_create
+          - FAILURE: on_failure
+    - aks_create:
+        do:
+          OaC.Qotd.Mod.ssh_command: []
+        navigate:
           - SUCCESS: SUCCESS
           - FAILURE: on_failure
-  results:
+results:
     - SUCCESS
     - FAILURE
